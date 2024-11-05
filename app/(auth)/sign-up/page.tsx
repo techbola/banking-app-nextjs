@@ -1,9 +1,11 @@
-import React from 'react';
+import AuthForm from "@/components/AuthForm";
 
-function Page() {
-    return (
-        <div>Sign upPage</div>
-    );
+function SignUp() {
+  return (
+    <section className="flex-center size-full max-sm:px-6">
+      <AuthForm type="sign-up" />
+    </section>
+  );
 }
 
-export default Page;
+export default SignUp;
