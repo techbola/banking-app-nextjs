@@ -208,9 +208,7 @@ export const authFormSchema = (type: string) =>
       type === "sign-in" ? z.string().optional() : z.string().min(3).max(6),
     dateOfBirth: type === "sign-in" ? z.string().optional() : z.string().min(3),
     ssn: type === "sign-in" ? z.string().optional() : z.string().min(3),
-    // sign up and sign in
-    email: z.string().email({ message: "Invalid email address" }),
-    password: z
-      .string()
-      .min(8, { message: "Password must be at least 6 characters long" }),
+    // both
+    email: z.string().email(),
+    password: z.string().min(8),
   });
